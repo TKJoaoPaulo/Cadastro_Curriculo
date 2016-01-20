@@ -1,4 +1,6 @@
+
 <?php 
+
 
 	$column_width = (int)(80/count($columns));
 	
@@ -25,11 +27,21 @@
 			</tr>
 		</thead>		
 		<tbody>
-<?php foreach($list as $num_row => $row){ ?>        
+<?php foreach($list as $num_row => $row){ 
+			if ($row->Nome!="") //1 - Pula linha de curriculo que ainda nao estao preenchidos
+			{
+
+	?>        
 		<tr  <?php if($num_row % 2 == 1){?>class="erow"<?php }?>>
 			<?php foreach($columns as $column){?>
 			<td width='<?php echo $column_width?>%' class='<?php if(isset($order_by[0]) &&  $column->field_name == $order_by[0]){?>sorted<?php }?>'>
-				<div class='text-left'><?php echo $row->{$column->field_name} != '' ? $row->{$column->field_name} : '&nbsp;' ; ?></div>
+				<div class='text-left'>
+				<?php
+
+				 echo $row->{$column->field_name} != '' ? $row->{$column->field_name} : '-' ; 
+
+
+				 ?></div>
 			</td>
 			<?php }?>
 			<?php if(!$unset_delete || !$unset_edit || !$unset_read || !empty($actions)){?>
@@ -57,7 +69,7 @@
 									?><img src="<?php echo $action->image_url; ?>" alt="<?php echo $action->label?>" /><?php 	
 								}
 							?></a>		
-					<?php }
+					<?php }}//fecha um if aberto 1-
 					}
 					?>					
                     <div class='clear'></div>

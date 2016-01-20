@@ -32,6 +32,7 @@ class Admin extends CI_Controller {
     		$this->grocery_crud->unset_add();
 
             //$this->grocery_crud->unset_export();
+            $this->grocery_crud->unset_fields('Account_Id');
             $this->grocery_crud->unset_print();
             $this->grocery_crud->unset_edit();
 
@@ -166,8 +167,17 @@ class Admin extends CI_Controller {
     }
 
     $output = $this->grocery_crud->render();
+    
 
     $this->load->view('admin-view',$output); 
+
+    }
+
+
+    public function logout()
+    {
+        $this->session->sess_destroy();
+        redirect('/login');
     }
 
  

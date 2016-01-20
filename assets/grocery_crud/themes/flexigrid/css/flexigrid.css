@@ -358,7 +358,7 @@ div.form-div input.datetime-input
 .form-display-as-box
 {
 	float:left;
-	width:200px;
+	width:250px;
 	padding-top:7px;
 }
 .form-input-box
@@ -1453,3 +1453,4 @@ input[type="submit"].btn.btn-mini {
 	margin-left: 550px;
 	z-index: 1000;
 }
+

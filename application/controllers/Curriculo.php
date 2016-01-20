@@ -143,6 +143,7 @@ class Curriculo extends CI_Controller {
 			//echo "registro efetuado";
 			$this->session->sess_destroy();
 			$this->load->view('sucesso_view');
+			$this->output->set_header('refresh:3;url='.base_url().'index.php/login');
 		}
 
 	}

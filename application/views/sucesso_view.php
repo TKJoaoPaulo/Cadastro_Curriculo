@@ -236,9 +236,9 @@ p {
     <div id="contenta">
       <!-- Icons source http://dribbble.com/shots/913555-Flat-Web-Elements -->
       <div class="notify successbox">
-        <h1>Currículo Cadastrado!</h1>
+        <h1>Dados enviados!</h1>
         <span class="alerticon"><img src="/sistema/imgs/check.png" alt="checkmark" /></span>
-        <p>Seu currículo foi cadastrado em nossa base com sucesso!</p>
+        <p>Seus dados foram enviados para nossa base com sucesso!</p>
         <center><p>Obrigado!</p></center>
       </div>
       

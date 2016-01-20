@@ -102,7 +102,8 @@ class Login extends CI_Controller {
 
 
 			$this->load->view('registrar_view',$msg);
-
+			//$this->output->set_header('refresh:3;url='.base_url().'index.php/login');
+			$this->logar();
 
 			
 		}
@@ -155,7 +156,7 @@ class Login extends CI_Controller {
 
 
 		    $this->email->from('recrutamento@libbero.com.br','Libbero - Sua senha');
-		    $this->email->to("tk.joaopaulo@gmail.com"); // email array
+		    $this->email->to($email); // email array
 		    $this->email->subject('Senha de acesso');   
 		    $this->email->message("Sua senha para acessar nosso sistema: ".$resultado['senha']);
 

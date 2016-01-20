@@ -46,7 +46,13 @@ if($success_message !== null){?>
 ?></div>
 <div class="flexigrid" style='width: 100%;' data-unique-hash="<?php echo $unique_hash; ?>">
 	<div id="hidden-operations" class="hidden-operations"></div>
+		<div class="logout text-left">
+       			<form id="logout" name="logout" class="form-horizontal" method="POST" role="form" action="<?php echo base_url('index.php/Admin/logout'); ?>">
+            			 <button type="submit" class="btn btn-success">Sair</button>
+      			</form>    
+    	</div> 
 	<div class="mDiv">
+		    
 		<div class="ftitle">
 			&nbsp;
 		</div>
@@ -54,6 +60,7 @@ if($success_message !== null){?>
 			<span></span>
 		</div>
 	</div>
+
 	<div id='main-table-box' class="main-table-box">
 
 	<?php if(!$unset_add || !$unset_export || !$unset_print){?>

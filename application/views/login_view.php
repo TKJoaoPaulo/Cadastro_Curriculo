@@ -103,7 +103,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     Entrar</button>
           
                 <a href="<?php echo base_url('index.php/login/redefinir'); ?>" class="pull-right need-help">Esqueceu a senha? </a>
-                <a href="<?php echo base_url('index.php/login/registrar'); ?>" class="pull-left new-account">Registrar</a>
+                <a href="<?php echo base_url('index.php/login/registrar'); ?>" class="pull-left new-account">Cadastrar</a>
                 </form>
             </div>
 

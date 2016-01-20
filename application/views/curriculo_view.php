@@ -1523,8 +1523,8 @@ $(function() {
                 <div class="col-md-offset-2 col-md-8">
                     <div class="panel-botao">
                         <div class="panel-botao text-right">
-
-                           <button type="submit" class="btn btn-success">Cadastrar Curriculo</button>
+                            <?php if ($Nome==""){ echo '<button type="submit" class="btn btn-success">Cadastrar Curriculo</button>'; }else{ echo '<button type="submit" class="btn btn-success">Salvar Alterações</button>';}  ?>
+                           
 
                             <!--Fin datos personales-->
                             
