@@ -83,9 +83,80 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     margin-top: 10px;
 }
 
+label.error { float: none; color: red; margin: 0 .5em 0 0; vertical-align: top; font-size: 12px }
+
 
 	
 	</style>
+
+
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+ <script>
+
+ $(document).ready(function(){
+  function add() {
+    if($(this).val() === ''){
+      $(this).val($(this).attr('placeholder')).addClass('placeholder');
+    }
+  }
+
+  function remove() {
+    if($(this).val() === $(this).attr('placeholder')){
+      $(this).val('').removeClass('placeholder');
+    }
+  }
+
+  // Create a dummy element for feature detection
+  if (!('placeholder' in $('<input>')[0])) {
+
+    // Select the elements that have a placeholder attribute
+    $('input[placeholder], textarea[placeholder]').blur(add).focus(remove).each(add);
+
+    // Remove the placeholder text before the form is submitted
+    $('form').submit(function(){
+      $(this).find('input[placeholder], textarea[placeholder]').each(remove);
+    });
+  }
+});
+
+ </script>
+
+
+
+      <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+      <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+      <script src="http://cdn.jsdelivr.net/jquery.validation/1.14.0/jquery.validate.js"></script>
+<script>
+$(document).ready( function() {
+  $("#candidatedata").validate({
+    // Define as regras
+    rules:{
+      senha:{
+        // campoNome será obrigatório (required) e terá tamanho mínimo (minLength)
+        required: true
+      },
+      email:{
+        // campoMensagem será obrigatório (required) e terá tamanho mínimo (minLength)
+        required: true, email: true
+      }
+    },
+    // Define as mensagens de erro para cada regra
+    messages:{
+      senha:{
+        required: "Digite sua senha"
+      },
+      email:{
+        required: "Digite seu Email", email: "Digite um e-mail válido"
+      }
+    }
+  });
+});
+</script>
+
+
+
+
+
 	<meta name="viewport" content="width=480, initial-scale=1, maximum-scale=1, user-scalable=no">
 </head>
 <body>
@@ -96,7 +167,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div class="account-wall">
                 <img class="profile-img" src="http://cadastrolibbero.esy.es/image001.png"
                     alt="">
-                <form class="form-signin" action="<?php echo base_url('index.php/login/logar'); ?>" method="post">
+                <form class="form-signin" id="candidatedata" name="candidatedata" action="<?php echo base_url('index.php/login/logar'); ?>" method="post">
                 <input type="text" id ="email" name="email" class="form-control" placeholder="Email" required autofocus>
                 <input type="password" id="senha" name="senha" class="form-control" placeholder="Senha" required>
                 <button class="btn btn-lg btn btn-success btn-block" type="submit">

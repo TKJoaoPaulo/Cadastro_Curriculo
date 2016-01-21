@@ -82,10 +82,39 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     display: block;
     margin-top: 10px;
 }
+label.error { float: none; color: red; margin: 0 .5em 0 0; vertical-align: top; font-size: 12px }
 
 
 	
 	</style>
+
+      <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+      <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+      <script src="http://cdn.jsdelivr.net/jquery.validation/1.14.0/jquery.validate.js"></script>
+<script>
+$(document).ready( function() {
+  $("#candidatedata").validate({
+    // Define as regras
+    rules:{
+      email:{
+        // campoMensagem será obrigatório (required) e terá tamanho mínimo (minLength)
+        required: true, email: true
+      }
+    },
+    // Define as mensagens de erro para cada regra
+    messages:{
+      email:{
+        required: "Digite seu Email", email: "Digite um e-mail válido"
+      }
+    }
+  });
+});
+</script>
+
+
+
+
+
 	<meta name="viewport" content="width=480, initial-scale=1, maximum-scale=1, user-scalable=no">
 </head>
 <body>
@@ -107,7 +136,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         }    
 
                     ?>
-                <form class="form-signin" action="<?php echo base_url('index.php/login/redefinir_senha'); ?>" method="post">
+                <form class="form-signin" id="candidatedata" name="candidatedata" action="<?php echo base_url('index.php/login/redefinir_senha'); ?>" method="post">
                 <input type="text" id ="email" name="email" class="form-control" placeholder="Email" required autofocus>
                 <p></p>
                 <button class="btn btn-lg btn btn-warning btn-block" type="submit">Redefinir Senha</button>
