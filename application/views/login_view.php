@@ -2,7 +2,9 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 ?><!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 	<meta charset="utf-8">
 	<title>Welcome to CodeIgniter</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
@@ -123,9 +125,9 @@ label.error { float: none; color: red; margin: 0 .5em 0 0; vertical-align: top; 
 
 
 
-      <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+      <script src="//ajax.aspnetcdn.com/ajax/jQuery/jquery-1.6.1.min.js"></script>
       <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-      <script src="http://cdn.jsdelivr.net/jquery.validation/1.14.0/jquery.validate.js"></script>
+      <script src="//ajax.aspnetcdn.com/ajax/jquery.validate/1.8.1/jquery.validate.js"></script>
 <script>
 $(document).ready( function() {
   $("#candidatedata").validate({

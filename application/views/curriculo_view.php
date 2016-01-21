@@ -11,9 +11,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	  <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
       <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.js">
 	  
-      <script src="//code.jquery.com/jquery-1.10.2.js"></script>
-	  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-      <script src="http://cdn.jsdelivr.net/jquery.validation/1.14.0/jquery.validate.js"></script>
+      <script src="//ajax.aspnetcdn.com/ajax/jQuery/jquery-1.6.1.min.js"></script>
+      <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+      <script src="//ajax.aspnetcdn.com/ajax/jquery.validate/1.8.1/jquery.validate.js"></script>
 
 	  <link rel="stylesheet" href="/resources/demos/style.css">
 
