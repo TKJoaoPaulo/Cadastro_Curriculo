@@ -1,3 +1,6 @@
+<a href="<?php echo base_url('index.php/Admin'); ?>">Voltar</a>
+
+
 <?php
 
 	$this->set_css($this->default_theme_path.'/flexigrid/css/flexigrid.css');
