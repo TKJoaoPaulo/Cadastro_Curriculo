@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <title>Libbero-Cadastro Currículo</title>
     <meta charset="utf-8" />
  
 <?php 
